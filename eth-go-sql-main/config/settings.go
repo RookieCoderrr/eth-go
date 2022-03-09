@@ -104,6 +104,7 @@ func initDBConn() {
 	} else {
 		GlobalDB = db
 	}
+	fmt.Println("db connection successfully")
 }
 
 func initRedisConn() {
@@ -115,4 +116,5 @@ func initRedisConn() {
 	GlobalRedis = redis.NewClient(&redis.Options{
 		Addr:     fmt.Sprintf("%v:%v", addr, port),
 	})
+	fmt.Println("redis connection successfully")
 }
