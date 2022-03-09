@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-func main() {
+func RunConsumer() {
 	runtime.GOMAXPROCS(eth.LimitConcurrency)
 	var specClientUrl string
 	isInsertPsql := true

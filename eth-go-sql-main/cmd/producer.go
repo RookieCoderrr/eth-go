@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func main() {
+func RunProducer() {
 	// 一个线程获取区块，一个线程插入log数据
 	runtime.GOMAXPROCS(2)
 	for{

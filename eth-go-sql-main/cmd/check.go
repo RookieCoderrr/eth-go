@@ -4,7 +4,7 @@ import (
 	"git.cocosbcx.net/bigdata/eth-go-sql/eth"
 )
 
-func main() {
+func RunCheck() {
 	// 单独的线程来处理失败的交易数据
 	go eth.CheckRedisFailedTransaction()
 	// 单独的线程处理补块程序
