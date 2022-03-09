@@ -1,4 +1,4 @@
-package main
+package cmd
 
 import (
 	"git.cocosbcx.net/bigdata/eth-go-sql/config"
