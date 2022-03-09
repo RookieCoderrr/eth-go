@@ -1,0 +1,17 @@
+FROM golang:alpine AS builder
+ENV GO111MODULE on
+ENV GOPROXY https://goproxy.cn,direct
+ENV GOOS linux
+ENV GOARCH amd64
+ENV CGO_ENABLED 0
+WORKDIR /usr/app
+COPY . .
+RUN go mod download
+RUN time go build -o eth-check check.go
+
+FROM alpine
+LABEL maintainer=cnpython@163.com
+WORKDIR /usr/app
+COPY --from=builder /usr/app/eth-check /usr/app/eth-check
+COPY --from=builder /usr/app/.env /usr/app/.env
+CMD  ./eth-check
