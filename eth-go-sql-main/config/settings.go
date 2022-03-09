@@ -25,7 +25,7 @@ var GlobalBlockSeqQueue string
 var GlobalTxLogQueue string
 var MqExchangeName string
 
-func init() {
+func Init() {
 	err := godotenv.Load("config.env")
 	if err != nil {
 		err = godotenv.Load("../config.env")
