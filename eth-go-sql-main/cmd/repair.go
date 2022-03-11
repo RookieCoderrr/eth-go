@@ -1,4 +1,4 @@
-package cmd
+package main
 
 import (
 	"git.cocosbcx.net/bigdata/eth-go-sql/config"
@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func RunRepair() {
+func main() {
 	if len(os.Args)==2{
 		startBlockNumber,err := strconv.ParseInt(strings.TrimSpace(os.Args[1]),10,64)
 		if err!=nil{

@@ -1,4 +1,4 @@
-package cmd
+package main
 
 import (
 	"git.cocosbcx.net/bigdata/eth-go-sql/eth"
@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func RunProducer() {
+func main() {
 	// 一个线程获取区块，一个线程插入log数据
 	runtime.GOMAXPROCS(2)
 	for{

@@ -1,4 +1,4 @@
-package cmd
+package main
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func RunTest() {
+func main() {
 	if len(os.Args)==3{
 		url := os.Args[1]
 		startBlockNumber,err := strconv.ParseInt(strings.TrimSpace(os.Args[2]),10,64)

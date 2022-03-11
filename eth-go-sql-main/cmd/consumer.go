@@ -1,4 +1,4 @@
-package cmd
+package main
 
 import (
 	"git.cocosbcx.net/bigdata/eth-go-sql/eth"
@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-func RunConsumer() {
+func main() {
 	runtime.GOMAXPROCS(eth.LimitConcurrency)
 	var specClientUrl string
 	isInsertPsql := true
